@@ -1779,6 +1779,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\ShoppingController.cs" />
+    <Compile Include="Controllers\SimulationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1991,6 +1992,7 @@
     <Folder Include="OuterTools\assets\jquery-file-upload\server\php\files\thumbnail\" />
     <Folder Include="Pictures\" />
     <Folder Include="Views\Shopping\" />
+    <Folder Include="Views\Simulation\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Project.BLL\Project.BLL.csproj">
