@@ -1777,10 +1777,8 @@
     <Compile Include="AuthenticationClasses\AdminAuthentication.cs" />
     <Compile Include="AuthenticationClasses\MemberAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KayahanController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\ShoppingController.cs" />
-    <Compile Include="Controllers\SimulationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
