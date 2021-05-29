@@ -11,6 +11,7 @@ namespace Project.WEBUI.Controllers
         // GET: Kayahan
         public ActionResult Index()
         {
+            int a = 10;
             int b = 10;
             return View();
         }
