@@ -8,6 +8,10 @@ namespace Project.WEBUI.Controllers
 {
     public class ShoppingController : Controller
     {
+
+        //Todo: Product Crud işlemlerinde kaldık...
+
+
         // GET: Shopping
         public ActionResult Index()
         {
