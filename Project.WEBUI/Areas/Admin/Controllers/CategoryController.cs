@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace Project.WEBUI.Areas.Admin.Controllers
 {
-    //[AdminAuthentication]
+    [AdminAuthentication]
     public class CategoryController : Controller
     {
 
