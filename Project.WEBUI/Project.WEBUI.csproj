@@ -1981,6 +1981,7 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\Home\Simulation.cshtml" />
+    <Content Include="Views\Shopping\ShoppingList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1995,7 +1996,6 @@
     <Folder Include="OuterTools\assets\jquery-file-upload\server\php\files\thumbnail\" />
     <Folder Include="Pictures\" />
     <Folder Include="Views\Kayahan\" />
-    <Folder Include="Views\Shopping\" />
     <Folder Include="Views\Simulation\" />
   </ItemGroup>
   <ItemGroup>

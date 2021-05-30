@@ -1,0 +1,3 @@
+﻿Eger Roslyn Exe normalde Soluiton Build ve Solution Clean yapılmasına rağmen hala hata cıkarıyorsa Package Manager Console'dan su kod ile Manual bir kurulum yapabilirsiniz...
+
+update-package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r

@@ -1,0 +1,108 @@
+﻿@model PAVM
+@{
+    ViewBag.Title = "ShoppingList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+<h2 style="color:red">@TempData["sepetBos"]</h2>
+<h2 style="color:red">@TempData["baglantiRed"]</h2>
+<h2 style="color:red">@TempData["sorun"]</h2>
+
+
+<div class="row">
+    <div class="col-md-3">
+        <section class="panel">
+            <div class="panel-body">
+                <h2 style="color:aqua">Kategoriler</h2>
+                <ul>
+                    @foreach (Category item in Model.Categories)
+                    {
+                        <li style="padding-top:3px">@Html.ActionLink(item.CategoryName, "ShoppingList", new { categoryID = item.ID }, new { @class = "btn btn-primary" })</li>
+                    }
+                </ul>
+            </div>
+        </section>
+
+    </div>
+    <div class="col-md-9">
+        <section class="panel">
+            <div class="panel-body">
+                <div class="pull-right">
+                    <ul class="pagination pagination-sm">
+                        @if (TempData["catID"] != null)
+                        {
+                            <li>@Html.PagedListPager(Model.PagedProducts, page => Url.Action("ShoppingList", new { page, categoryID = TempData["catID"] }))</li>
+                        }
+                        else
+                        {
+                            <li>
+                                @Html.PagedListPager(Model.PagedProducts, page => Url.Action("ShoppingList", new { page }))
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="row product-list">
+
+
+            @foreach (Product item in Model.PagedProducts)
+            {
+                <div class="col-md-4">
+                    <section class="panel">
+                        <div class="pro-img-box">
+
+                            @if (item.ImagePath == null)
+                            {
+                                <img src="~/Pictures/47a8571d-433b-4820-8e67-97c1a9490f89.jpg" alt="Resim yok" width="100" height="300" title="@item.ProductName" />
+                            }
+                            else
+                            {
+                                <img src="@item.ImagePath" alt="Resim yok" width="100" height="300" title="@item.ProductName" />
+                            }
+
+                            @*Url.Action'in bize verdigi fayda,belli durumlarda ACtionLink kullanmak tasarımımıza uygun olmadıgı zamanlarda ortaya cıkar *@
+
+                            @*@Html.ActionLink()*@
+
+                            <a href="@Url.Action("AddToCart",new { id=item.ID})" class="adtocart">
+                                <i class="icon-shopping-cart"></i>
+                            </a>
+                        </div>
+
+                        <div class="panel-body text-center">
+                            <h4>
+                                <a href="#" class="pro-title" title="@item.ProductName">
+                                    @item.ProductName.Substring(0, 6)
+                                </a>
+                            </h4>
+                            <p class="price">$@item.UnitPrice</p>
+                        </div>
+                    </section>
+                </div>
+            }
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+@section Sepet{
+    <li>
+        <a href="@Url.Action("CartPage","Shopping")">
+            <i class="icon-shopping-cart"></i> Cart
+        </a>
+    </li>
+
+}

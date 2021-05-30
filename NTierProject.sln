@@ -20,6 +20,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E72B8E23-5942-4C9C-B278-12A9A2C697D3}"
 	ProjectSection(SolutionItems) = preProject
 		ODev.txt = ODev.txt
+		RosylynYuklemeKodu.txt = RosylynYuklemeKodu.txt
 	EndProjectSection
 EndProject
 Global
