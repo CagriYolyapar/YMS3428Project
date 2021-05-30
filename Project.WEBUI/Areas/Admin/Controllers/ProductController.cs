@@ -29,7 +29,7 @@ namespace Project.WEBUI.Areas.Admin.Controllers
         {
             ProductVM pvm = new ProductVM
             {
-                Products = _pRep.Where(x => x.ID == id)
+                Product = _pRep.Find(id)
             };
             return View(pvm);
         }
